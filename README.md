@@ -92,3 +92,21 @@ P1: I didn't give a suggestion so I'm not sure.
 P2: Yeah! I think people would love it, but it would probably cost a lot of money!
 
 P3: Yeah I think they would.
+
+# Requirements
+
+The project requires the use of VSCode, Twilio, AWS EC2, and the Wunderground API which aggregates and returns weather data based on lattitude and longitude. Code from assignment 3 is used as starter code to build upon the messaging platform. Once the application is up and running, the user will need a Twilio account to access the program on AWS and cellphone signal so that the messages are sent. 
+
+# Development
+
+1) Present a brief overview of project to all clients interviewed and ask for feedback on final product and any additional functionality that can be added to the project. 
+2) Use feedback received from clients to make any reasonable - based on time and implentation difficulty - changes to the project. 
+3) Once the exact functionalities of the project are finalized, copy over assignment 3 code to new repo
+4) Write method to establish connection to Wunderground API and test stability of connection to API. In case of failure to connect to Wunderground, return error to client that the service cannot be used.
+5) Once connection is established, modify and integrate starter to code to recieve user input in lattitude and longitude, parse the input, call on Wunderground with input and return the response to the client. Write and modify tests for each function modified or added (unit testing) and add integration tests (methods working together to test overall funcitonality of the program.
+6) Once all code is written and local tests are passing, conduct testing of code by using the application. If there are mitigations or inadequate exception handling, then note them down.
+7) Make any changes needed based on step 6 and add or modify testing code.
+8) Once minimum viable product is ready give access to small group of clients to use the application.
+9) Ask for feedback regularly (once a month) from clients and modify application based on desired functionalites and any issues that need to be fixed. Continue this cycle until project is either shelfed or passed on to another developer.
+
+
