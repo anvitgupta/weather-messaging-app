@@ -1,5 +1,8 @@
 # weather-messaging-app
 
+# Note
+I was not able to deploy the application to AWS because I was using clj-http library to make my api calls. I intially copied over the assignment 4 code and was able to successfuly deploy to AWS and use twilio but after writing all my code for this assignment I attempted again and got the clj-http exception from AWS. I did not understand the error and emailed Professor White about the issue, he told me that the library only compiles in Java and that it would not work in AWS because it compiles code in Javascript. He also provided me some starter code for the HTTP library which would work in AWS. I was able to use this to get a valid promise back but I could not figure out how to isolate the JSON object returned. Any function I attempted on the promise turned it into another promise. I also tried using threads but I ran into seperate issue with clojure on that. As a result of my failure, I reverted my code to the clj-http library and ran the project locally.
+
 # Summary:
 This project is a weather messaging application where a user can text a message asking for the weather at a specific location either in lattitude and longitude or using the city and state and recieve a response with the weather and forcast for that location. The purpose of this application is to help hikers who are on long hikes and have no access to wifi and cannot tell if inclement weather is in the area. By using a messaging platform, hikers will not require wifi on their hikes to keep up with any weather changes and will only need their phones and a cellular signal.
 
@@ -109,6 +112,3 @@ The project requires the use of VSCode, Twilio, AWS EC2, and the Wunderground AP
 8) Once minimum viable product is ready give access to small group of clients to use the application.
 9) Ask for feedback regularly (once a month) from clients and modify application based on desired functionalites and any issues that need to be fixed. Continue this cycle until project is either shelfed or passed on to another developer.
 
-# Note
-
-I was not able to deploy the application to AWS because I was using clj-http library to make my api calls. I did not understand the error and emailed Professor White about the issue, he told me that the library only compiles in Java and that it would not work in AWS because it compiles code in Javascript. He also provided me some starter code for the HTTP library which would work in AWS. I was able to use this to get a valid promise back but I could not figure out how to isolate the JSON object returned. Any function I attempted on the promise turned it into another promise. I also tried using threads but I ran into seperate issue with clojure on that. As a result of my failure, I reverted my code to the clj-http library and ran the project locally.
