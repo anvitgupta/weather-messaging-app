@@ -2,6 +2,7 @@
   (:require [clojure.test :refer :all]
             [clojure.core.async :refer [<!!]]
             [clojure.spec.alpha :as s]
+            [clojure.string :as string]
             [clojure.spec.test.alpha :as stest]
             [clojure.test.check.generators :as gen]
             [asgnx.forecast :refer :all]
@@ -19,7 +20,7 @@
     (is (= "1000000" (get-in sample-weather-map [:city :population])))
     (is (= true (contains? sample-weather-map) :list))))
 
-(deftest kelvin->fahrenheit
+(deftest kelvin->fahrenheit-test
   (testing "that given a temperature in kelvin, a the temperature in fahrenheit is outputted"
     (is (= -460 (kelvin->fahrenheit 0)))
     (is (= -400 (kelvin->fahrenheit 33)))
@@ -31,7 +32,7 @@
 (def sample-forecast
   (get-forecast "London"))
 
-(deftest get-forecast
+(deftest get-forecast-test
   (testing "that a correctly formmated string outputted when called on"
     (is (= 40 (count (string/split-lines sample-forecast))))
     (is (= true (every? true?
