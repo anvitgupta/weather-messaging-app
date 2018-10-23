@@ -102,11 +102,13 @@ The project requires the use of VSCode, Twilio, AWS EC2, and the Wunderground AP
 1) Present a brief overview of project to all clients interviewed and ask for feedback on final product and any additional functionality that can be added to the project. 
 2) Use feedback received from clients to make any reasonable - based on time and implentation difficulty - changes to the project. 
 3) Once the exact functionalities of the project are finalized, copy over assignment 3 code to new repo
-4) Write method to establish connection to Wunderground API and test stability of connection to API. In case of failure to connect to Wunderground, return error to client that the service cannot be used.
+4) Write method to establish connection to Wunderground API and test stability of connection to API. 
 5) Once connection is established, modify and integrate starter to code to recieve user input in lattitude and longitude, parse the input, call on Wunderground with input and return the response to the client. Write and modify tests for each function modified or added (unit testing) and add integration tests (methods working together to test overall funcitonality of the program.
 6) Once all code is written and local tests are passing, conduct testing of code by using the application. If there are mitigations or inadequate exception handling, then note them down.
 7) Make any changes needed based on step 6 and add or modify testing code.
 8) Once minimum viable product is ready give access to small group of clients to use the application.
 9) Ask for feedback regularly (once a month) from clients and modify application based on desired functionalites and any issues that need to be fixed. Continue this cycle until project is either shelfed or passed on to another developer.
 
+# Note
 
+I was not able to deploy the application to AWS because I was using clj-http library to make my api calls. I did not understand the error and emailed Professor White about the issue, he told me that the library only compiles in Java and that it would not work in AWS because it compiles code in Javascript. He also provided me some starter code for the HTTP library which would work in AWS. I was able to use this to get a valid promise back but I could not figure out how to isolate the JSON object returned. Any function I attempted on the promise turned it into another promise. I also tried using threads but I ran into seperate issue with clojure on that. As a result of my failure, I reverted my code to the clj-http library and ran the project locally.
